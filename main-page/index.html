@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a class="title" href="http://localhost:3000/products">PRODUCTS</a>
+        <div class="buttons-container">
+            <button class="nav-buttons">HOME</button>
+            <button class="nav-buttons">SERVICES</button>
+            <button class="nav-buttons">PRICING</button>
+            <button class="nav-buttons">GALLERY</button>
+            <button class="nav-buttons">ABOUT</button>
+            <button class="nav-buttons">CONTACT</button>
+        </div>
+        <span>CONNECT</span>
+    </nav>
+
+    <main>
+        <div class="filter-container">
+            <h1 class="title-filter">FILTER</h1>
+            <div class="filter-configurations-container">
+                <input type="search" id="searchField" placeholder="Search by name...">
+                <div class="limit-container elements">
+                    <span id="decrement-button" class="limit-buttons"><</span>
+                    <div class="limit-text-and-number-container">
+                        <span class="limit-text">LIMIT</span>
+                        <span class="limit-number">30</span>
+                    </div>
+                    <span id="increment-button" class="limit-buttons">></span>
+                </div>
+                <div class="elements" id="categories-container">
+                    <div class="categories-container-head">
+                        <span>CATEGORIES</span>
+                        <span id="categories-expand-icon">+</span>
+                    </div>
+                    <div class="categories-container-lists">
+                        <ul class="categories-lists">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-container">
+            <div class="products-nav">
+                <div class="products-nav-buttons">
+                    <button>NOTHING</button>
+                    <button>THERE</button>
+                    <button>NA</button>
+                </div>
+                <div class="search-results-container">
+                    <span class="results-count"></span>
+                    <img class="reload-button" src="images/reload-icon.jpg" onclick="reload()">
+                </div>
+            </div>
+
+            <div class="product-cards-container">
+
+                <!-- <div class="loading-container">
+                    <div class="bars-container">
+                        <div class="bars" id="bar3"></div>
+                        <div class="bars" id="bar2"></div>
+                        <div class="bars" id="bar1"></div>
+                    </div>
+                    <h3 class="loading-text">WAIT A MOMENT...</h3>
+                </div> -->
+
+                <!-- <div class="card-container">
+                    <img class="product-image" src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png">
+                    <span class="product-category">CATEGORY</span>
+                    <h3 class="product-title">TITLE</h3>
+                </div> -->
+
+            </div>
+        </div>
+    </main>
+
+    <div class="block-screen"></div>
+
+    <div class="product-display-container">
+
+        <!-- <img class="display-image" src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png">
+        <div class="display-contents-container">
+            <span class="display-category">CATEGORY</span>
+            <span class="display-title">THIS IS TITLE</span>
+
+            <div class="product-details-container">
+
+                <div class="product-detail-cards">
+                    <span class="product-detail-title">RATING</span>
+                    <span class="product-detail-subtitle">4.7</span>
+                </div>
+
+                <div class="product-detail-cards">
+                    <span class="product-detail-title">STOCK</span>
+                    <span class="product-detail-subtitle">5</span>
+                </div>
+
+                <div class="product-detail-cards">
+                    <span class="product-detail-title">BRAND</span>
+                    <span class="product-detail-subtitle">ESSENCE</span>
+                </div>
+
+                <div class="product-detail-cards">
+                    <span class="product-detail-title">WEIGHT</span>
+                    <span class="product-detail-subtitle">2 KG</span>
+                </div>
+
+            </div>
+
+            <span class="display-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores sint explicabo at natus sunt, aspernatur saepe eos! Saepe nesciunt earum, possimus in perspiciatis maiores aspernatur delectus ab quia eligendi?</span>
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
