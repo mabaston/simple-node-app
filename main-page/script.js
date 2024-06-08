@@ -276,4 +276,8 @@ function reload() {
     categoryMode ? displayProductsByCategories(currentCategory) : displayProducts();
 }
 
+function reloadPage() {
+    window.location.reload();
+}
+
 reload();

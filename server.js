@@ -14,6 +14,7 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/products', (req, res) => {
+    console.log('Logged');
     res.status(200);
     res.sendFile(path.join(__dirname, 'main-page', 'index.html'));
 });
