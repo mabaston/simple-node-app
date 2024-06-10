@@ -19,6 +19,14 @@ app.get('/products', (req, res) => {
     res.sendFile(path.join(__dirname, 'main-page', 'index.html'));
 });
 
+app.get('/reload', (req, res) => {
+    res.status(200).send({ message: "Success" });
+});
+
 const PORT = process.PORT || 3000;
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}...`));
+
+setInterval(() => {
+    fetch('http://localhost:3000/reload').then(response => response.json()).then(data => console.log(data.message));
+}, 5000);
