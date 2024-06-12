@@ -2,26 +2,16 @@ const path = require('path');
 
 const express = require('express');
 const dotenv = require('dotenv');
-dotenv.config({ path: 'config.env' });
+dotenv.config({ path: path.join(__dirname, 'config', 'config.env') });
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'main-page')));
+const eventRouters = require('./routers/event-routers');
 
-app.get('/home', (req, res) => {
-    res.status(200);
-    res.send('<h1>Welcome</h1>');
-});
+app.use('/products', express.static(path.join(__dirname, 'web-pages', 'products-page')));
+app.use('/home', express.static(path.join(__dirname, 'web-pages', 'home-page')));
 
-app.get('/products', (req, res) => {
-    console.log('Logged');
-    res.status(200);
-    res.sendFile(path.join(__dirname, 'main-page', 'index.html'));
-});
-
-app.get('/reload', (req, res) => {
-    res.status(200).send({ message: "Success" });
-});
+app.use('/', eventRouters);
 
 const PORT = process.PORT || 3000;
 
