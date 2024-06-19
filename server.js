@@ -8,8 +8,7 @@ const app = express();
 
 const eventRouters = require('./routers/event-routers');
 
-app.use('/products', express.static(path.join(__dirname, 'web-pages', 'products-page')));
-app.use('/home', express.static(path.join(__dirname, 'web-pages', 'home-page')));
+app.use('/', express.static('./web-pages'));
 
 app.use('/', eventRouters);
 
